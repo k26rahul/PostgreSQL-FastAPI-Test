@@ -62,7 +62,7 @@ check_db_connection()
 
 @app.get("/")
 def read_root():
-  return {"Hello": "World"}
+  return {"message": "Hello World"}
 
 
 @app.get("/db")
