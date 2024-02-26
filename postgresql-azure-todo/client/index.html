@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PostgreSQL-Azure-Todo</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <button data-screen="Login">Login</button>
+        <button data-screen="Signup">Signup</button>
+        <button data-screen="Todo">Todo</button>
+      </ul>
+    </nav>
+    <main>
+      <section class="app-screen login-screen">
+        <form class="vertical-stack" id="login-form">
+          <input type="text" name="email" placeholder="Enter email" />
+          <input type="password" name="password" placeholder="Enter password" />
+          <button>Login</button>
+        </form>
+      </section>
+
+      <section class="app-screen signup-screen">
+        <form class="vertical-stack" id="signup-form">
+          <input type="text" name="name" placeholder="Enter name" />
+          <input type="text" name="email" placeholder="Enter email" />
+          <input type="password" name="password" placeholder="Enter password" />
+          <button>Login</button>
+        </form>
+      </section>
+
+      <section class="app-screen app-screen--active todo-screen">
+        <form class="vertical-stack" id="todo-form">
+          <input
+            type="text"
+            name="todo"
+            placeholder="Enter task"
+            value="test todo text"
+          />
+          <button>Add Todo</button>
+        </form>
+
+        <div class="todo-container vertical-stack"></div>
+      </section>
+    </main>
+  </body>
+</html>

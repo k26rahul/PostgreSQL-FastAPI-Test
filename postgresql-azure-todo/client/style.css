@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.vertical-stack,
+.horizontal-stack {
+  --stack-margin: 1em;
+}
+
+.vertical-stack > * + * {
+  margin-top: var(--stack-margin);
+}
+
+.horizontal-stack > * + * {
+  margin-left: var(--stack-margin);
+}
+
+.app-screen {
+  padding-top: 5rem;
+  display: none;
+}
+
+.app-screen--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-container,
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.todo-container {
+  --stack-margin: 0.5rem;
+  align-items: center;
+  border: 5px solid lightseagreen;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 2rem 10rem;
+}
